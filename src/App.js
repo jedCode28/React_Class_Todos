@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import List from './List';
+import TodoForm from './TodoForm';
 class App extends Component {
   state = {
     todos: [
@@ -12,7 +13,10 @@ class App extends Component {
   render() {
     const { todos } = this.state;
     return(
+      <div>
+        <TodoForm />
       <List name="Todo List" items={todos} />
+      </div>
     );
   }
 }
