@@ -17,12 +17,27 @@ class App extends Component {
     this.setState({ todos: [todo, ...todos] });
   }
 
+  handleClick = (id) => {
+    const { todos } = this.state;
+    this.setState({
+      todos: todos.map( todo => {
+        if(todo.id === id){
+          return {
+            ...todo,
+            complete: !todo.complete
+          }
+        }
+        return todo
+      })
+    })
+  }
+
   render() {
     const { todos } = this.state;
     return(
       <div>
         <TodoForm addItem={this.addItem} />
-        <List name="Todo List" items={todos} />
+        <List name="Todo List" items={todos} todoClick={this.handleClick} />
       </div>
     );
   }
