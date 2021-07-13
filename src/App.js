@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css';
 import List from './List';
 import TodoForm from './TodoForm';
 import Footer from './Footer';
@@ -52,11 +53,13 @@ class App extends Component {
   render() {
     const { todos, filter } = this.state;
     return(
-      <div>
-        <TodoForm addItem={this.addItem} />
+      <>
+      <div className='master'>
         <List name="Todo List" items={this.visibleItems()} todoClick={this.handleClick} />
+        <TodoForm addItem={this.addItem} />
         <Footer filter={filter} setFilter={this.setFilter} />
       </div>
+      </>
     );
   }
 }

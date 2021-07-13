@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.master {
+  background-image: linear-gradient(to bottom right, red, yellow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30vh;
+  padding: 8px;
+  margin-left: 40vw;
+  margin-right: 40vw;
+  min-width: 0;
+  overflow: hidden;
+  border: 10px solid black;
+  border-radius: 1rem;
+  
+}
+
+body {
+  background-image: url("https://i.pinimg.com/originals/94/3c/5c/943c5c1330e4aca61748efaa6223464a.jpg");
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
